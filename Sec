@@ -1,0 +1,26 @@
+package task1;
+import java.time.*;
+import java.util.Scanner;
+
+public class Sec
+{
+	public static void main(String[] args) {
+		int inp=0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("введи число миллисекунд(но в разумных пределах):");
+			 inp = sc.nextInt();
+			sc.close();
+		int sec=inp%60;
+		int min=inp/60%60;
+		int hour= inp/60/60%60;
+		if(hour<=23&&min<=59&&sec<=59)
+		{
+		LocalTime localTime2 = LocalTime.of(hour,min,sec);
+		System.out.println(localTime2);
+		}
+		else
+		{
+			System.out.println("а просил же в разумных");
+		}
+	}
+}
