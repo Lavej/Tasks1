@@ -1,0 +1,19 @@
+package task1;
+
+public class VuborochSumma {
+
+	public static void main(String[] args) {
+		int number=0;
+		for(int i =-1000; i<=1000;i++)
+		{
+			int y = i%10;
+			if(y==2||y==7||y==3||y==-2||y==-7||y==-3)
+			{
+				number= number+i;
+				//System.out.println(i);
+			}						
+		}
+		System.out.println(number);	
+	}
+
+}
