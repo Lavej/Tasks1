@@ -1,0 +1,32 @@
+package task1;
+
+import java.util.Scanner;
+
+public class etazhka {
+
+	public static void main(String[] args) {
+		
+		int etazh=9;
+		int podiezd=4;
+		int kvarNaEtazhe=4;
+		int kolKvPoiezd = etazh*podiezd;
+		int vsegoKvartir=etazh*podiezd*kvarNaEtazhe;
+		
+		Scanner sc = new Scanner(System.in);		
+		System.out.println("Введите № квартиры от 1 до "+vsegoKvartir);		
+		int flatin = sc.nextInt();
+    	sc.close();
+		
+	 if ((flatin > 1)&&(flatin < vsegoKvartir)) 
+	 {		
+		 int access = (flatin/(kolKvPoiezd) + 1);		
+		 int floor = (flatin%(kolKvPoiezd)/podiezd + 1);
+		 System.out.println("Подъезд "+access+", этаж "+floor);	
+		}
+		
+		else 
+		{
+			System.out.println("Такой квартиры в доме нет");
+		}
+	}
+}
