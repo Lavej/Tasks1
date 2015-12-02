@@ -1,0 +1,23 @@
+package task1;
+import java.util.Scanner;
+
+public class Zadacha11
+{
+	public static void main(String[] args) {
+
+		int res = 0;
+		Scanner sc = new Scanner(System.in);
+		String[] tokens = sc.nextLine().split("\\+",2);
+		String n1=tokens[0];
+		String n2=tokens[1];
+		sc.close(); 
+		  try {
+		        int i1 = Integer.parseInt(n1); 
+		        int i2 = Integer.parseInt(n2); 
+		        res = i1+i2;
+				System.out.print("="+res);
+		    } catch (NumberFormatException e) {  
+		        System.err.println("Не а, так не покатит!");  
+		    } 
+	}
+}
