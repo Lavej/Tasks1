@@ -1,0 +1,28 @@
+package task1;
+
+public class Elka {
+	public void genElka(int b) {
+		int c = b;
+		int d = b;
+		for (int i = 1; i <= d / 2; i++) {
+			for (int j = 1; j <= d; j++) {
+				if (j == b / 2 || j == b / 2 + 1 || j == c / 2 || j == c / 2 + 1) {
+					System.out.print("-");
+				} else if (j >= b / 2 || j >= b / 2 + 1 || j <= c / 2 || j <= c / 2 + 1) {
+					System.out.print(" ");
+				} else {
+					System.out.print("|");
+				}
+			}
+			c = c - 2;
+			b = b + 2;
+			System.out.println();
+
+		}
+	}
+
+	public static void main(String[] args) {
+		Elka novaja = new Elka();
+		novaja.genElka(89);
+	}
+}
