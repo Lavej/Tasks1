@@ -1,11 +1,21 @@
 package task1;
 
-public class stud {
+import java.util.Scanner;
 
-	public static void main(String[] args) {
-		int vozrast = 22;
-		System.out.println("<<"+vozrast+" года>>");
+class stud {
 
+    public static void main(String args[]) {
+    	System.out.println("Напишіть ім'я та вік через пробіл");
+    	Scanner sc = new Scanner(System.in);
+		String[] tokens = sc.nextLine().split(" ",2);
+		String n1=tokens[0];
+		String n2=tokens[1];
+		sc.close(); 
+		  try {
+		        int i1 = Integer.parseInt(n2);  
+				System.out.print("Студент "+n1+" <<"+i1+" років>>");
+		    } catch (NumberFormatException e) {  
+		        System.err.println("Ніфіга!");  
+		    } 
 	}
-
 }
